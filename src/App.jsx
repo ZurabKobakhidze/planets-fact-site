@@ -1,11 +1,13 @@
-
-import { Routes, Route} from "react-router-dom";
+import "./App.css";
+import planets from "./planets";
+import { Routes, Route, Navigate} from "react-router-dom";
 
 function App() {
   
   return <div>
     <Routes>
-      <Route path="/" element={<div>main page</div>}/>
+      <Route path="/" element={<Navigate to="/planets"/>}/>
+      <Route path="/planets" element={<planets/>}/>
     </Routes>
 
   </div>;
