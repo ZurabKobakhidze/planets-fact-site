@@ -7,7 +7,7 @@ function App() {
   const navigate = useNavigate();
 
   const handlePlanetClick = (planetName) => {
-    navigate(`/PlanetDetails/${planetName}`);
+    navigate(`/planet/${planetName}`);
   };
 
   return (
@@ -45,8 +45,7 @@ function App() {
         </div>
       </header>
       <Routes>
-        <Route path="/" element={<PlanetDetails />} />
-        <Route path="/PlanetDetails/:planetName" element={<PlanetDetails />} />
+        <Route path="/planet/:planetName" element={<PlanetDetails />} />
       </Routes>
     </div>
   );

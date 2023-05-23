@@ -4,11 +4,14 @@ import data from "./data.json";
 import sourceIcon from "./assets/icon-source.svg";
 import "./planetDetails.css";
 
+
 const PlanetDetails = () => {
   const { planetName } = useParams();
   const selectedPlanet = data.find(
     (planet) => planet.name.toLowerCase() === planetName
   ) || {};
+
+  
 
   const {
     name = "",
@@ -19,10 +22,12 @@ const PlanetDetails = () => {
     revolution = "",
     radius = "",
     temperature = "",
-    images: { planet: planetImage = "" } = {},
+    images: { planet: planetImage = "", internal: internalImage = "", geology: geologyImage = "" } = {},
   } = selectedPlanet;
 
   const [activeSection, setActiveSection] = useState("overview");
+
+  
 
   const handleSectionClick = (section) => {
     setActiveSection(section);
@@ -45,6 +50,8 @@ const PlanetDetails = () => {
 
   const { content: sectionContent, source: sectionSource } =
     sectionData[activeSection] || sectionData["overview"];
+
+  
 
   return (
     <>
@@ -74,7 +81,15 @@ const PlanetDetails = () => {
       </div>
       <div className="container_1">
         <div className="planets_div">
+        {activeSection === "overview" && (
           <img className="planet_svg" src={planetImage} alt={name} />
+        )}
+        {activeSection === "structure" && (
+          <img className="planet_svg" src={internalImage} alt={name} />
+        )}
+        {activeSection === "surface" && (
+          <img className="planet_svg" src={geologyImage} alt={name} />
+        )}
         </div>
         <h1 className="planet_name">{name}</h1>
         <p className="planet_paragraph">{sectionContent}</p>
