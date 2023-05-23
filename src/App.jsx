@@ -1,5 +1,5 @@
 import "./App.css";
-import planets from "./planets";
+import Planets from "./planets"; // Update import statement
 import { Routes, Route, Navigate } from "react-router-dom";
 import Hamburger from "./assets/icon-hamburger.svg";
 
@@ -12,17 +12,9 @@ function App() {
           <img src={Hamburger} alt="Hamburger" />
         </div>
       </header>
-      <div className="underline"></div>
-      <div className="info_planets_div">
-        <h2 className="h2_info">OVERVIEW</h2>
-        <h2 className="h2_info">Structure</h2>
-        <h2 className="h2_info">Surface </h2>
-      </div>
-      <div className="underline"></div>
-
       <Routes>
         <Route path="/" element={<Navigate to="/planets" />} />
-        <Route path="/planets" element={<planets />} />
+        <Route path="/planets" element={<Planets />} /> {/* Update component name */}
       </Routes>
     </div>
   );
