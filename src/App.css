@@ -51,4 +51,14 @@ body {
   height: 17px;
 }
 
+.menu_planets{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.menu_names{
+  color: white;
+}
+
 

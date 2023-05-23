@@ -77,8 +77,8 @@
   margin-top: 16px;
 }
 
-.source_div{
-    margin-top: 10px;
+.source_div {
+  margin-top: 10px;
 }
 
 .h2_source {
@@ -92,9 +92,71 @@
   opacity: 0.5;
 }
 
+.wiki_text {
+  text-decoration: underline;
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 25px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  text-decoration-skip-ink: none;
+}
+
 .source_div {
   display: flex;
   align-items: center;
   flex-direction: row;
   gap: 4px;
+}
+
+.container_2 {
+  width: 100%;
+  padding-top: 28px;
+  padding-bottom: 47px;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container_2_info_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: none;
+  height: 48px;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
+.rotation {
+  font-family: "Spartan";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 8px;
+  line-height: 16px;
+  letter-spacing: 0.727273px;
+  text-transform: uppercase;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.numbers_info {
+  font-family: "Antonio";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: right;
+  letter-spacing: -0.75px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: -4px;
 }
