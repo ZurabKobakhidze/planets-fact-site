@@ -8,18 +8,18 @@ const PlanetDetails = () => {
   const { planetName } = useParams();
   const selectedPlanet = data.find(
     (planet) => planet.name.toLowerCase() === planetName
-  );
+  ) || {};
 
   const {
-    name,
-    overview: { content: overviewContent, source: overviewSource },
-    structure: { content: structureContent, source: structureSource },
-    geology: { content: geologyContent, source: geologySource },
-    rotation,
-    revolution,
-    radius,
-    temperature,
-    images: { planet: planetImage },
+    name = "",
+    overview: { content: overviewContent = "", source: overviewSource = "" } = {},
+    structure: { content: structureContent = "", source: structureSource = "" } = {},
+    geology: { content: geologyContent = "", source: geologySource = "" } = {},
+    rotation = "",
+    revolution = "",
+    radius = "",
+    temperature = "",
+    images: { planet: planetImage = "" } = {},
   } = selectedPlanet;
 
   const [activeSection, setActiveSection] = useState("overview");
