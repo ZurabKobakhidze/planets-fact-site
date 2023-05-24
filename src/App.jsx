@@ -1,23 +1,26 @@
+import React, { useState } from 'react';
 import "./App.css";
 import PlanetDetails from "./PlanetDetails";
 import { Routes, Route, useNavigate, Link } from "react-router-dom";
 import Hamburger from "./assets/icon-hamburger.svg";
 
 function App() {
-  const navigate = useNavigate();
-
-  const handlePlanetClick = (planetName) => {
-    navigate(`/planet/${planetName}`);
-  };
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  }
 
   return (
     <div>
       <header className="header">
         <h1 className="h1_planets">THE PLANETS</h1>
-        <div className="menu_div">
+        <div className="menu_div" onClick={toggleMenu}>
           <img src={Hamburger} alt="Hamburger" />
         </div>
-        <div className="menu_planets">
+      </header>
+      <div className="underline_app"></div>
+      <div className={`menu_planets ${isOpen ? 'open' : ''}`}>
           <Link to="/planet/mercury" className="menu_names">mercury</Link>
           <Link to="/planet/venus" className="menu_names">venus</Link>
           <Link to="/planet/earth" className="menu_names">earth</Link>
@@ -27,7 +30,6 @@ function App() {
           <Link to="/planet/uranus" className="menu_names">uranus</Link>
           <Link to="/planet/neptune" className="menu_names">neptune</Link>
         </div>
-      </header>
       <Routes>
         <Route path="/planet/:planetName" element={<PlanetDetails />} />
       </Routes>

@@ -51,14 +51,37 @@ body {
   height: 17px;
 }
 
-.menu_planets{
+.menu_planets {
   display: flex;
   flex-direction: row;
   gap: 10px;
+  position: absolute;
+  width: 100%;
+  background: #070724;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+  padding-top: 44px;
+  z-index: 1;
 }
 
-.menu_names{
-  color: white;
+.menu_names {
+  text-decoration: none;
+  font-family: 'Spartan';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 1.36364px;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
 
-
+.underline_app {
+  width: 100%;
+  background: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.2;
+  height: 1px;
+}
