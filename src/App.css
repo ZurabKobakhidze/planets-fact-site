@@ -36,6 +36,10 @@ body {
   padding-bottom: 16px;
 }
 
+.h1_planets_desktop {
+  display: none;
+}
+
 .h1_planets {
   font-family: "Antonio";
   font-style: normal;
@@ -184,17 +188,16 @@ body {
 
   .desktop_menu {
     display: block;
-    font-family: 'Spartan';
+    font-family: "Spartan";
     font-style: normal;
     font-weight: 700;
     font-size: 11px;
     line-height: 25px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #ffffff;
     text-decoration: none;
     cursor: pointer;
-
   }
 
   .desktop_menu_div {
@@ -209,4 +212,43 @@ body {
 }
 
 @media screen and (min-width: 1440px) {
+  .header {
+    display: none;
+  }
+
+  .h1_planets_desktop {
+    display: block;
+    font-family: "Antonio";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: -1.05px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+
+  .header_desktop_div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 22px;
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: border-box;
+    align-items: flex-end;
+  }
+
+  .desktop_menu_div{
+    display: flex;
+    flex-direction: row;
+    padding-left: 0px;
+    padding-right: 0;
+    box-sizing: border-box;
+    width: auto;
+    gap: 33px;
+    justify-content: space-between;
+  }
 }

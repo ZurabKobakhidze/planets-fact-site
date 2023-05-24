@@ -71,6 +71,7 @@ const PlanetDetails = () => {
   return (
     <>
       <div>
+        
         <div className="info_planets_div ">
           <div className="info_box_h2">
             <button

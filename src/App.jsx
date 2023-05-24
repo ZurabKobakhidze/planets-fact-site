@@ -7,6 +7,7 @@ import arrow from "./assets/icon-chevron.svg";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -134,34 +135,39 @@ function App() {
           </Link>
         </div>
       </div>
-      <div className="desktop_menu_div">
-        <Link to="/planet/mercury" className="desktop_menu">
-          mercury
-        </Link>
-        <Link to="/planet/venus" className="desktop_menu">
-          venus
-        </Link>
-        <Link to="/planet/earth" className="desktop_menu">
-          earth
-        </Link>
-        <Link to="/planet/mars" className="desktop_menu">
-          mars
-        </Link>
-        <Link to="/planet/jupiter" className="desktop_menu">
-          jupiter
-        </Link>
-        <Link to="/planet/saturn" className="desktop_menu">
-          saturn
-        </Link>
-        <Link to="/planet/uranus" className="desktop_menu">
-          uranus
-        </Link>
-        <Link to="/planet/neptune" className="desktop_menu">
-          neptune
-        </Link>
+      <div className="header_desktop_div">
+        <h1 className="h1_planets_desktop">THE PLANETS</h1>
+        <div className="desktop_menu_div">
+          <Link to="/planet/mercury" className="desktop_menu">
+            mercury
+          </Link>
+          <Link to="/planet/venus" className="desktop_menu">
+            venus
+          </Link>
+          <Link to="/planet/earth" className="desktop_menu">
+            earth
+          </Link>
+          <Link to="/planet/mars" className="desktop_menu">
+            mars
+          </Link>
+          <Link to="/planet/jupiter" className="desktop_menu">
+            jupiter
+          </Link>
+          <Link to="/planet/saturn" className="desktop_menu">
+            saturn
+          </Link>
+          <Link to="/planet/uranus" className="desktop_menu">
+            uranus
+          </Link>
+          <Link to="/planet/neptune" className="desktop_menu">
+            neptune
+          </Link>
+        </div>
       </div>
+
       <div className="underline_app_desktop"></div>
       <Routes>
+      
         <Route path="/planet/:planetName" element={<PlanetDetails />} />
       </Routes>
     </div>

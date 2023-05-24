@@ -27,6 +27,8 @@
   position: relative;
 }
 
+
+
 .h2_info {
   font-family: "Spartan";
   font-style: normal;
@@ -98,8 +100,8 @@
 
 .surface_geology {
   width: 90px;
-    margin-top: 100px;
-    position: absolute;
+  margin-top: 100px;
+  position: absolute;
 }
 
 .h2_source {
@@ -113,7 +115,7 @@
   opacity: 0.5;
 }
 
-.mini_container1_1{
+.mini_container1_1 {
   height: 305px;
   display: flex;
   align-items: center;
@@ -278,8 +280,6 @@
     gap: 17px;
   }
 
-  
-
   .h2_info {
     font-family: "Spartan";
     font-style: normal;
@@ -330,26 +330,26 @@
     gap: 6px;
   }
 
-  .numbers_info{
-    font-family: 'Antonio';
+  .numbers_info {
+    font-family: "Antonio";
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 31px;
     letter-spacing: -0.9px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
-  .mini_container1_1{
+  .mini_container1_1 {
     height: 460px;
   }
 
-  .planet_svg{
+  .planet_svg {
     width: 64%;
   }
 
-  .surface_geology{
+  .surface_geology {
     width: 104px;
     margin-top: 230px;
     position: absolute;
@@ -357,4 +357,153 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .container_1 {
+    flex-direction: row;
+    width: 100%;
+    gap: 130px;
+    padding-left: 165px;
+    padding-right: 165px;
+  }
+
+  .grid_container{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    width: auto;
+    gap: 39px;
+  }
+
+  .planet_svg{
+    width: 100%;
+  }
+
+  .surface_geology{
+    width: 163px;
+    margin-top: 380px;
+  }
+
+  .mini_container1_1{
+    height: 754px;
+    width: 100%;
+  }
+
+  .planet_name{
+    font-family: 'Antonio';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 104px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+
+  .h2_source{
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+
+  .source_div{
+    margin-top: 24px;
+  }
+
+  .info_box_h2{
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: none;
+    height: 48px;
+    width: 350px;
+    padding-left: 28px;
+    padding-right: 2px;
+    box-sizing: border-box;
+    gap: 28px;
+    cursor: pointer;
+  }
+
+  
+
+
+
+  .number_grid_div{
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 2.57143px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+
+  .h2_info{
+    width: 260px;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 2.57143px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+  }
+
+  .container_2{
+    padding-left: 165px;
+    padding-right: 165px;
+    flex-direction: row;
+    padding-bottom: 56px;
+  }
+
+  .container_2_info_box{
+    height: 128px;
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: none;
+    padding-left: 23px;
+    padding-right: 24px;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    padding-top: 20px;
+    padding-bottom: 19px;
+    box-sizing: border-box;
+    gap: 4px;
+  }
+
+  .rotation{
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+
+  .numbers_info{
+    font-family: 'Antonio';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
 }
