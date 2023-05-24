@@ -11,6 +11,7 @@ const PlanetDetails = () => {
 
   const {
     name = "",
+    color = "",
     overview: {
       content: overviewContent = "",
       source: overviewSource = "",
@@ -55,29 +56,70 @@ const PlanetDetails = () => {
   const { content: sectionContent, source: sectionSource } =
     sectionData[activeSection] || sectionData["overview"];
 
+  const getShortenedSource = (fullSource) => {
+    const domain = getDomainFromUrl(fullSource);
+    return domain.charAt(0).toUpperCase() + domain.slice(1);
+  };
+
+  const getDomainFromUrl = (url) => {
+    const match = url.match(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n]+)/im);
+    return match && match[1];
+  };
+
   return (
     <>
       <div>
-        
         <div className="info_planets_div">
-          <button
-            className="h2_info"
-            onClick={() => handleSectionClick("overview")}
-          >
-            OVERVIEW
-          </button>
-          <button
-            className="h2_info"
-            onClick={() => handleSectionClick("structure")}
-          >
-            Structure
-          </button>
-          <button
-            className="h2_info"
-            onClick={() => handleSectionClick("surface")}
-          >
-            Surface
-          </button>
+          <div className="info_box_h2">
+            <button
+              className={`h2_info ${
+                activeSection === "overview" ? "active" : ""
+              }`}
+              onClick={() => handleSectionClick("overview")}
+            >
+              OVERVIEW
+            </button>
+            {activeSection === "overview" && (
+              <div
+                className="underline_color_box"
+                style={{ backgroundColor: color }}
+              ></div>
+            )}
+          </div>
+
+          <div className="info_box_h2">
+            <button
+              className={`h2_info ${
+                activeSection === "structure" ? "active" : ""
+              }`}
+              onClick={() => handleSectionClick("structure")}
+            >
+              Structure
+            </button>
+            {activeSection === "structure" && (
+              <div
+                className="underline_color_box"
+                style={{ backgroundColor: color }}
+              ></div>
+            )}
+          </div>
+
+          <div className="info_box_h2">
+            <button
+              className={`h2_info ${
+                activeSection === "surface" ? "active" : ""
+              }`}
+              onClick={() => handleSectionClick("surface")}
+            >
+              Surface
+            </button>
+            {activeSection === "surface" && (
+              <div
+                className="underline_color_box"
+                style={{ backgroundColor: color }}
+              ></div>
+            )}
+          </div>
         </div>
         <div className="underline"></div>
       </div>
@@ -91,7 +133,11 @@ const PlanetDetails = () => {
           )}
           {activeSection === "surface" && (
             <>
-              <img className="planet_svg surface_planet" src={planetImage} alt={name} />
+              <img
+                className="planet_svg surface_planet"
+                src={planetImage}
+                alt={name}
+              />
               <img
                 className="planet_svg surface_geology"
                 src={geologyImage}
@@ -104,7 +150,10 @@ const PlanetDetails = () => {
         <p className="planet_paragraph">{sectionContent}</p>
         <div className="source_div">
           <h2 className="h2_source">
-            Source: <span className="wiki_text">{sectionSource}</span>
+            Source:{" "}
+            <a href={sectionSource} target="_blank" rel="noopener noreferrer" className="wiki_text">
+              {getShortenedSource(sectionSource)}
+            </a>
           </h2>
           <img src={sourceIcon} alt="sourceIcon" />
         </div>

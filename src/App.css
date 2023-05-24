@@ -65,9 +65,24 @@ body {
   z-index: 1;
 }
 
+.menu_planets {
+  display: none;
+}
+
+.menu_div {
+  display: block;
+}
+
+.menu_planets.open {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 67px;
+}
+
 .menu_names {
   text-decoration: none;
-  font-family: 'Spartan';
+  font-family: "Spartan";
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
@@ -75,7 +90,11 @@ body {
   text-align: center;
   letter-spacing: 1.36364px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .underline_app {
@@ -84,4 +103,40 @@ body {
   mix-blend-mode: normal;
   opacity: 0.2;
   height: 1px;
+}
+
+.underline_mobile_menu {
+  width: 100%;
+  background: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.2;
+  height: 1px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.planet_mobile_divs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mobile_menu_design {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.menu_circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .menu_div{
+    display: none;
+  }
+  
 }
