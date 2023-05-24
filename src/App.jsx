@@ -134,7 +134,7 @@ function App() {
           </Link>
         </div>
       </div>
-      <div className="desktop_menu">
+      <div className="desktop_menu_div">
         <Link to="/planet/mercury" className="desktop_menu">
           mercury
         </Link>
@@ -160,6 +160,7 @@ function App() {
           neptune
         </Link>
       </div>
+      <div className="underline_app_desktop"></div>
       <Routes>
         <Route path="/planet/:planetName" element={<PlanetDetails />} />
       </Routes>

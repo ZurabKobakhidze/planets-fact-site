@@ -88,18 +88,13 @@
   margin-top: 16px;
 }
 
-.desktop_menu {
-  display: none;
-}
-
 .source_div {
   margin-top: 10px;
 }
 
 .planet_svg {
-  width: 40%;
+  width: 38.3%;
 }
-
 
 .surface_geology {
   width: 90px;
@@ -116,6 +111,13 @@
   color: #ffffff;
   mix-blend-mode: normal;
   opacity: 0.5;
+}
+
+.mini_container1_1{
+  height: 305px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .wiki_text {
@@ -185,4 +187,174 @@
   text-transform: uppercase;
   color: #ffffff;
   margin-top: -4px;
+}
+
+.info_planets_div_desktop {
+  display: none;
+}
+
+.mini_container1_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .info_planets_div {
+    display: none;
+  }
+
+  .info_planets_div_desktop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .container_1 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .mini_container1_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .grid_container {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .planet_name {
+    font-family: "Antonio";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 62px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  .planet_paragraph {
+    font-family: "Spartan";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 22px;
+    color: #ffffff;
+    width: 339px;
+    text-align: initial;
+    margin-top: 24px;
+    height: 110px;
+  }
+
+  .source_div {
+    margin-top: 32px;
+  }
+
+  .info_box_h2 {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: none;
+    height: 40px;
+    width: 281px;
+    padding-left: 20px;
+    padding-right: 2px;
+    box-sizing: border-box;
+    gap: 17px;
+  }
+
+  
+
+  .h2_info {
+    font-family: "Spartan";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 25px;
+    letter-spacing: 1.92857px;
+    text-transform: uppercase;
+    color: #ffffff;
+    width: 200px;
+    text-align: inherit;
+  }
+
+  .number_grid_div {
+    font-family: "Spartan";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 25px;
+    letter-spacing: 1.92857px;
+    text-transform: uppercase;
+    color: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+  }
+
+  .container_2 {
+    padding-left: 40px;
+    padding-right: 40px;
+    flex-direction: row;
+    padding-bottom: 36px;
+  }
+
+  .container_2_info_box {
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: none;
+    height: auto;
+    padding-left: 15px;
+    padding-right: 24px;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    padding-top: 16px;
+    padding-bottom: 19px;
+    box-sizing: border-box;
+    gap: 6px;
+  }
+
+  .numbers_info{
+    font-family: 'Antonio';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: -0.9px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+
+  .mini_container1_1{
+    height: 460px;
+  }
+
+  .planet_svg{
+    width: 64%;
+  }
+
+  .surface_geology{
+    width: 104px;
+    margin-top: 230px;
+    position: absolute;
+  }
+}
+
+@media screen and (min-width: 1440px) {
 }

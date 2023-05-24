@@ -62,14 +62,16 @@ const PlanetDetails = () => {
   };
 
   const getDomainFromUrl = (url) => {
-    const match = url.match(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n]+)/im);
+    const match = url.match(
+      /^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:\/\n]+)/im
+    );
     return match && match[1];
   };
 
   return (
     <>
       <div>
-        <div className="info_planets_div">
+        <div className="info_planets_div ">
           <div className="info_box_h2">
             <button
               className={`h2_info ${
@@ -124,38 +126,108 @@ const PlanetDetails = () => {
         <div className="underline"></div>
       </div>
       <div className="container_1">
-        <div className="planets_div">
-          {activeSection === "overview" && (
-            <img className="planet_svg" src={planetImage} alt={name} />
-          )}
-          {activeSection === "structure" && (
-            <img className="planet_svg" src={internalImage} alt={name} />
-          )}
-          {activeSection === "surface" && (
-            <>
-              <img
-                className="planet_svg surface_planet"
-                src={planetImage}
-                alt={name}
-              />
-              <img
-                className="planet_svg surface_geology"
-                src={geologyImage}
-                alt={name}
-              />
-            </>
-          )}
+        <div className="mini_container1_1">
+          <div className="planets_div">
+            {activeSection === "overview" && (
+              <img className="planet_svg" src={planetImage} alt={name} />
+            )}
+            {activeSection === "structure" && (
+              <img className="planet_svg" src={internalImage} alt={name} />
+            )}
+            {activeSection === "surface" && (
+              <>
+                <img
+                  className="planet_svg surface_planet"
+                  src={planetImage}
+                  alt={name}
+                />
+                <img
+                  className="planet_svg surface_geology"
+                  src={geologyImage}
+                  alt={name}
+                />
+              </>
+            )}
+          </div>
         </div>
-        <h1 className="planet_name">{name}</h1>
-        <p className="planet_paragraph">{sectionContent}</p>
-        <div className="source_div">
-          <h2 className="h2_source">
-            Source:{" "}
-            <a href={sectionSource} target="_blank" rel="noopener noreferrer" className="wiki_text">
-              {getShortenedSource(sectionSource)}
-            </a>
-          </h2>
-          <img src={sourceIcon} alt="sourceIcon" />
+        <div className="grid_container">
+          <div className="info_planets_div_desktop ">
+            <div
+              className={`info_box_h2 ${
+                activeSection === "overview" ? "active" : ""
+              }`}
+              style={{
+                backgroundColor:
+                  activeSection === "overview" ? color : "transparent",
+              }}
+            >
+              <span className="number_grid_div">01</span>
+              <button
+                className={`h2_info ${
+                  activeSection === "overview" ? "active" : ""
+                }`}
+                onClick={() => handleSectionClick("overview")}
+              >
+                OVERVIEW
+              </button>
+            </div>
+            <div
+              className={`info_box_h2 ${
+                activeSection === "structure" ? "active" : ""
+              }`}
+              style={{
+                backgroundColor:
+                  activeSection === "structure" ? color : "transparent",
+              }}
+            >
+              <span className="number_grid_div">02</span>
+              <button
+                className={`h2_info ${
+                  activeSection === "structure" ? "active" : ""
+                }`}
+                onClick={() => handleSectionClick("structure")}
+              >
+                Structure
+              </button>
+            </div>
+            <div
+              className={`info_box_h2 ${
+                activeSection === "surface" ? "active" : ""
+              }`}
+              style={{
+                backgroundColor:
+                  activeSection === "surface" ? color : "transparent",
+              }}
+            >
+              <span className="number_grid_div">03</span>
+              <button
+                className={`h2_info ${
+                  activeSection === "surface" ? "active" : ""
+                }`}
+                onClick={() => handleSectionClick("surface")}
+              >
+                Surface
+              </button>
+            </div>
+          </div>
+          <div className="mini_container1_2">
+            <h1 className="planet_name">{name}</h1>
+            <p className="planet_paragraph">{sectionContent}</p>
+            <div className="source_div">
+              <h2 className="h2_source">
+                Source:{" "}
+                <a
+                  href={sectionSource}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="wiki_text"
+                >
+                  {getShortenedSource(sectionSource)}
+                </a>
+              </h2>
+              <img src={sourceIcon} alt="sourceIcon" />
+            </div>
+          </div>
         </div>
       </div>
       <div className="container_2">

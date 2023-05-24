@@ -47,6 +47,14 @@ body {
   color: #ffffff;
 }
 
+.desktop_menu {
+  display: none;
+}
+
+.desktop_menu_div {
+  display: none;
+}
+
 .menu_div {
   height: 17px;
 }
@@ -92,9 +100,9 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .underline_app {
@@ -134,9 +142,71 @@ body {
   border-radius: 50%;
 }
 
+.underline_app_desktop {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
-  .menu_div{
+  .menu_div {
     display: none;
   }
-  
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding-top: 32px;
+    padding-left: 24px;
+    padding-right: 24px;
+    box-sizing: border-box;
+    padding-bottom: 39px;
+    justify-content: center;
+  }
+
+  .desktop_menu {
+    display: flex;
+  }
+
+  .underline_app {
+    display: none;
+  }
+
+  .underline_app_desktop {
+    display: block;
+    width: 100%;
+    background: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.2;
+    height: 1px;
+    margin-top: 27px;
+  }
+
+  .desktop_menu {
+    display: block;
+    font-family: 'Spartan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+
+  }
+
+  .desktop_menu_div {
+    display: flex;
+    flex-direction: row;
+    padding-left: 52px;
+    padding-right: 52px;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1440px) {
 }
