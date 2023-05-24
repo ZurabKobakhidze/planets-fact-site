@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import data from "./data.json";
 import sourceIcon from "./assets/icon-source.svg";
-import "./planetDetails.css";
+import "./PlanetDetails.css";
 
 
 const PlanetDetails = () => {
