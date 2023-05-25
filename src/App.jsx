@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import PlanetDetails from "./PlanetDetails";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 import Hamburger from "./assets/icon-hamburger.svg";
 import arrow from "./assets/icon-chevron.svg";
 
@@ -167,7 +167,7 @@ function App() {
 
       <div className="underline_app_desktop"></div>
       <Routes>
-      
+        <Route path="/" element={<Navigate to="/planet/earth"/>}></Route>
         <Route path="/planet/:planetName" element={<PlanetDetails />} />
       </Routes>
     </div>
