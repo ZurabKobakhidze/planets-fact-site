@@ -3,6 +3,9 @@ import { useParams } from "react-router-dom";
 import data from "./data.json";
 import sourceIcon from "./assets/icon-source.svg";
 import "./PlanetDetails.css";
+import { motion } from "framer-motion";
+import planetEarth2 from "/planet-earth-2.svg";
+
 
 const PlanetDetails = () => {
   const { planetName } = useParams();
@@ -55,6 +58,35 @@ const PlanetDetails = () => {
 
   const { content: sectionContent, source: sectionSource } =
     sectionData[activeSection] || sectionData["overview"];
+
+    const motionVariants1 = {
+      animate: {
+        x: ["100%", "-100%"],
+        transition: {
+          x: {
+            repeat: Infinity,
+            duration: 20, // change the duration as you need
+            ease: "linear",
+            delay: 0,
+          },
+        },
+      },
+    };
+    
+    const motionVariants2 = {
+      initial: { x: "100%" },
+      animate: {
+        x: ["100%", "-100%"],
+        transition: {
+          x: {
+            repeat: Infinity,
+            duration: 20, // change the duration as you need
+            ease: "linear",
+            delay: 10,
+          },
+        },
+      },
+    };
 
   return (
     <>
@@ -117,22 +149,68 @@ const PlanetDetails = () => {
         <div className="mini_container1_1">
           <div className="planets_div">
             {activeSection === "overview" && (
-              <img className="planet_svg" src={planetImage} alt={name} />
+              <div className="motion_planet_div">
+              <motion.img
+                className="planet_svg"
+                src={planetImage}
+                alt={name}
+              />
+          
+              <motion.img
+                className="planet_svg_2"
+                src={planetEarth2}
+                alt={name}
+                variants={motionVariants1}
+                initial="initial"
+                animate="animate"
+              />
+          
+              <motion.img
+                className="planet_svg_2"
+                src={planetEarth2}
+                alt={name}
+                variants={motionVariants2}
+                initial="initial"
+                animate="animate"
+              />
+            </div>
             )}
             {activeSection === "structure" && (
-              <img className="planet_svg" src={internalImage} alt={name} />
+              <motion.img
+                className="planet_svg"
+                src={internalImage}
+                alt={name}
+                variants={variants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              />
             )}
             {activeSection === "surface" && (
               <>
-                <img
+                <motion.img
                   className="planet_svg surface_planet"
                   src={planetImage}
                   alt={name}
+                  variants={variants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                 />
-                <img
+                <motion.img
                   className="planet_svg surface_geology"
                   src={geologyImage}
                   alt={name}
+                  variants={variants}
+                  initial="initial"
+                  animate="animate"
+                  exit="exit"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                 />
               </>
             )}
