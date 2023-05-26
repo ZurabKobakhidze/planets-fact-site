@@ -65,6 +65,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
 }
 
 .planet_name {
@@ -98,30 +99,38 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+ 
+}
+
+.planet_svgs_overflow{
   overflow: hidden;
   border-radius: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
 }
 
 .planet_svg {
-  width: 100%;
-  object-fit: contain;
+  
+
 }
 
 .planet_svg_2{
   position: absolute;
-  width: 100%;
+
   transform: none;
   opacity: 1;
 }
 
 .planet_svg_3{
-  width: 100%;
+ 
   position: absolute;
 }
 
 .planet_svg_3_internal{
-  width: 100%;
+ 
   position: absolute;
 }
 
@@ -373,7 +382,7 @@
   }
 
   .planet_svg {
-    width: 64%;
+   
   }
 
   .surface_geology {
@@ -401,8 +410,37 @@
     gap: 39px;
   }
 
-  .planet_svg{
-    width: 100%;
+  .planet_svgs_overflow{
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+  }
+  
+  .planet_svg {
+    position: relative;
+    
+    
+  }
+  
+  .planet_svg_2{
+    position: absolute;
+    
+    transform: none;
+    opacity: 1;
+  }
+  
+  .planet_svg_3{
+    
+    position: absolute;
+  }
+  
+  .planet_svg_3_internal{
+   
+    position: absolute;
   }
 
   .surface_geology{

@@ -164,38 +164,41 @@ const PlanetDetails = () => {
           <div className="planets_div">
             {activeSection === "overview" && (
               <div className="motion_planet_div">
-                <motion.img
-                  className="planet_svg"
-                  src={planetImage}
-                  alt={name}
-                />
+                <div className="planet_svgs_overflow">
+                  <motion.img
+                    className="planet_svg"
+                    src={planetImage}
+                    alt={name}
+                  />
 
-                <motion.img
-                  className="planet_svg_2"
-                  src={planetImage2}
-                  alt={name}
-                  variants={motionVariants0}
-                  initial="initial"
-                  animate="animate"
-                />
+                  <motion.img
+                    className="planet_svg_2"
+                    src={planetImage2}
+                    alt={name}
+                    variants={motionVariants0}
+                    initial="initial"
+                    animate="animate"
+                  />
 
-                <motion.img
-                  className="planet_svg_2"
-                  src={planetImage2}
-                  alt={name}
-                  variants={motionVariants1}
-                  initial="initial"
-                  animate="animate"
-                />
+                  <motion.img
+                    className="planet_svg_2"
+                    src={planetImage2}
+                    alt={name}
+                    variants={motionVariants1}
+                    initial="initial"
+                    animate="animate"
+                  />
 
-                <motion.img
-                  className="planet_svg_2"
-                  src={planetImage2}
-                  alt={name}
-                  variants={motionVariants2}
-                  initial="initial"
-                  animate="animate"
-                />
+                  <motion.img
+                    className="planet_svg_2"
+                    src={planetImage2}
+                    alt={name}
+                    variants={motionVariants2}
+                    initial="initial"
+                    animate="animate"
+                  />
+                </div>
+
                 <motion.img
                   className="planet_svg_3"
                   src={planetImage3}
@@ -203,6 +206,7 @@ const PlanetDetails = () => {
                 />
               </div>
             )}
+
             {activeSection === "structure" && (
               <div className="motion_planet_div">
                 <motion.img
@@ -244,6 +248,7 @@ const PlanetDetails = () => {
                 />
               </div>
             )}
+
             {activeSection === "surface" && (
               <>
                 <div className="motion_planet_div">
