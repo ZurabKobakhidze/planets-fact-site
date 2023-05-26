@@ -4,8 +4,6 @@ import data from "./data.json";
 import sourceIcon from "./assets/icon-source.svg";
 import "./PlanetDetails.css";
 import { motion } from "framer-motion";
-import planetEarth2 from "/planet-earth-2.svg";
-
 
 const PlanetDetails = () => {
   const { planetName } = useParams();
@@ -30,7 +28,11 @@ const PlanetDetails = () => {
     temperature = "",
     images: {
       planet: planetImage = "",
+      planetMiddle: planetImage2 = "",
+      planetTop: planetImage3 = "",
       internal: internalImage = "",
+      internalMiddle: internalImage2 = "",
+      internalTop: internalImage3 = "",
       geology: geologyImage = "",
     } = {},
   } = selectedPlanet;
@@ -59,34 +61,46 @@ const PlanetDetails = () => {
   const { content: sectionContent, source: sectionSource } =
     sectionData[activeSection] || sectionData["overview"];
 
-    const motionVariants1 = {
-      animate: {
-        x: ["100%", "-100%"],
-        transition: {
-          x: {
-            repeat: Infinity,
-            duration: 20, // change the duration as you need
-            ease: "linear",
-            delay: 0,
-          },
+  const motionVariants0 = {
+    initial: { x: "0%", opacity: 1 },
+    animate: {
+      x: "-100%",
+      opacity: [1, 0],
+      transition: {
+        x: { duration: 10, ease: "linear" },
+        opacity: { delay: 10, duration: 0 },
+      },
+    },
+  };
+
+  const motionVariants1 = {
+    animate: {
+      x: ["100%", "-100%"],
+      transition: {
+        x: {
+          repeat: Infinity,
+          duration: 20,
+          ease: "linear",
+          delay: 0,
         },
       },
-    };
-    
-    const motionVariants2 = {
-      initial: { x: "100%" },
-      animate: {
-        x: ["100%", "-100%"],
-        transition: {
-          x: {
-            repeat: Infinity,
-            duration: 20, // change the duration as you need
-            ease: "linear",
-            delay: 10,
-          },
+    },
+  };
+
+  const motionVariants2 = {
+    initial: { x: "100%" },
+    animate: {
+      x: ["100%", "-100%"],
+      transition: {
+        x: {
+          repeat: Infinity,
+          duration: 20,
+          ease: "linear",
+          delay: 10,
         },
       },
-    };
+    },
+  };
 
   return (
     <>
@@ -150,67 +164,131 @@ const PlanetDetails = () => {
           <div className="planets_div">
             {activeSection === "overview" && (
               <div className="motion_planet_div">
-              <motion.img
-                className="planet_svg"
-                src={planetImage}
-                alt={name}
-              />
-          
-              <motion.img
-                className="planet_svg_2"
-                src={planetEarth2}
-                alt={name}
-                variants={motionVariants1}
-                initial="initial"
-                animate="animate"
-              />
-          
-              <motion.img
-                className="planet_svg_2"
-                src={planetEarth2}
-                alt={name}
-                variants={motionVariants2}
-                initial="initial"
-                animate="animate"
-              />
-            </div>
+                <motion.img
+                  className="planet_svg"
+                  src={planetImage}
+                  alt={name}
+                />
+
+                <motion.img
+                  className="planet_svg_2"
+                  src={planetImage2}
+                  alt={name}
+                  variants={motionVariants0}
+                  initial="initial"
+                  animate="animate"
+                />
+
+                <motion.img
+                  className="planet_svg_2"
+                  src={planetImage2}
+                  alt={name}
+                  variants={motionVariants1}
+                  initial="initial"
+                  animate="animate"
+                />
+
+                <motion.img
+                  className="planet_svg_2"
+                  src={planetImage2}
+                  alt={name}
+                  variants={motionVariants2}
+                  initial="initial"
+                  animate="animate"
+                />
+                <motion.img
+                  className="planet_svg_3"
+                  src={planetImage3}
+                  alt={name}
+                />
+              </div>
             )}
             {activeSection === "structure" && (
-              <motion.img
-                className="planet_svg"
-                src={internalImage}
-                alt={name}
-                variants={variants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              />
+              <div className="motion_planet_div">
+                <motion.img
+                  className="planet_svg"
+                  src={planetImage}
+                  alt={name}
+                />
+
+                <motion.img
+                  className="planet_svg_2"
+                  src={planetImage2}
+                  alt={name}
+                  variants={motionVariants0}
+                  initial="initial"
+                  animate="animate"
+                />
+
+                <motion.img
+                  className="planet_svg_2"
+                  src={planetImage2}
+                  alt={name}
+                  variants={motionVariants1}
+                  initial="initial"
+                  animate="animate"
+                />
+
+                <motion.img
+                  className="planet_svg_2"
+                  src={planetImage2}
+                  alt={name}
+                  variants={motionVariants2}
+                  initial="initial"
+                  animate="animate"
+                />
+                <motion.img
+                  className="planet_svg_3_internal"
+                  src={internalImage3}
+                  alt={name}
+                />
+              </div>
             )}
             {activeSection === "surface" && (
               <>
-                <motion.img
-                  className="planet_svg surface_planet"
-                  src={planetImage}
-                  alt={name}
-                  variants={variants}
-                  initial="initial"
-                  animate="animate"
-                  exit="exit"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                />
+                <div className="motion_planet_div">
+                  <motion.img
+                    className="planet_svg"
+                    src={planetImage}
+                    alt={name}
+                  />
+
+                  <motion.img
+                    className="planet_svg_2"
+                    src={planetImage2}
+                    alt={name}
+                    variants={motionVariants0}
+                    initial="initial"
+                    animate="animate"
+                  />
+
+                  <motion.img
+                    className="planet_svg_2"
+                    src={planetImage2}
+                    alt={name}
+                    variants={motionVariants1}
+                    initial="initial"
+                    animate="animate"
+                  />
+
+                  <motion.img
+                    className="planet_svg_2"
+                    src={planetImage2}
+                    alt={name}
+                    variants={motionVariants2}
+                    initial="initial"
+                    animate="animate"
+                  />
+                  <motion.img
+                    className="planet_svg_3"
+                    src={planetImage3}
+                    alt={name}
+                  />
+                </div>
                 <motion.img
                   className="planet_svg surface_geology"
                   src={geologyImage}
                   alt={name}
-                  variants={variants}
-                  initial="initial"
-                  animate="animate"
-                  exit="exit"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
                 />
               </>
             )}

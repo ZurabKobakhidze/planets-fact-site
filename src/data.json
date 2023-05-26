@@ -20,7 +20,11 @@
     "temperature": "430°c",
     "images": {
       "planet": "/planet-mercury.svg",
+      "planetMiddle": "/planet-mercury-2.svg",
+      "planetTop": "/planet-mercury-3.svg",
       "internal": "/planet-mercury-internal.svg",
+      "internalMiddle": "/planet-mercury-internal-2.svg",
+      "internalTop": "/planet-mercury-internal-3.svg",
       "geology": "/geology-mercury.png"
     }
   },
@@ -45,6 +49,9 @@
     "temperature": "471°c",
     "images": {
       "planet": "/planet-venus.svg",
+      "planetMiddle": "/planet-venus-2.svg",
+      "planetTop": "/planet-venus-3.svg",
+      "internalTop": "/planet-venus-internal-3.svg",
       "internal": "/planet-venus-internal.svg",
       "geology": "/geology-venus.png"
     }
@@ -70,6 +77,9 @@
     "temperature": "16°c",
     "images": {
       "planet": "/planet-earth.svg",
+      "planetMiddle": "/planet-earth-2.svg",
+      "planetTop": "/planet-earth-3.svg",
+      "internalTop": "/planet-earth-internal-3.svg",
       "internal": "/planet-earth-internal.svg",
       "geology": "/geology-earth.png"
     }
@@ -95,6 +105,9 @@
     "temperature": "-28°c",
     "images": {
       "planet": "/planet-mars.svg",
+      "planetMiddle": "/planet-mars-2.svg",
+      "planetTop": "/planet-mars-3.svg",
+      "internalTop": "/planet-mars-internal-3.svg",
       "internal": "/planet-mars-internal.svg",
       "geology": "/geology-mars.png"
     }
@@ -120,6 +133,9 @@
     "temperature": "-108°c",
     "images": {
       "planet": "/planet-jupiter.svg",
+      "planetMiddle": "/planet-jupiter-2.svg",
+      "planetTop": "/planet-jupiter-3.svg",
+      "internalTop": "/planet-jupiter-internal-3.svg",
       "internal": "/planet-jupiter-internal.svg",
       "geology": "/geology-jupiter.png"
     }
@@ -145,6 +161,9 @@
     "temperature": "-138°c",
     "images": {
       "planet": "/planet-saturn.svg",
+      "planetMiddle": "/planet-saturn-2.svg",
+      "planetTop": "/planet-saturn-3.svg",
+      "internalTop": "/planet-saturn-internal-3.svg",
       "internal": "/planet-saturn-internal.svg",
       "geology": "/geology-saturn.png"
     }
@@ -170,6 +189,9 @@
     "temperature": "-195°c",
     "images": {
       "planet": "/planet-uranus.svg",
+      "planetMiddle": "/planet-uranus-2.svg",
+      "planetTop": "/planet-uranus-3.svg",
+      "internalTop": "/planet-uranus-internal-3.svg",
       "internal": "/planet-uranus-internal.svg",
       "geology": "/geology-uranus.png"
     }
@@ -195,6 +217,9 @@
     "temperature": "-201°c",
     "images": {
       "planet": "/planet-neptune.svg",
+      "planetMiddle": "/planet-neptune-2.svg",
+      "planetTop": "/planet-neptune-3.svg",
+      "internalTop": "/planet-neptune-internal-3.svg",
       "internal": "/planet-neptune-internal.svg",
       "geology": "/geology-neptune.png"
     }
