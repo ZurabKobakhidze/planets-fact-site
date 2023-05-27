@@ -30,8 +30,7 @@ const PlanetDetails = () => {
       planet: planetImage = "",
       planetMiddle: planetImage2 = "",
       planetTop: planetImage3 = "",
-      internal: internalImage = "",
-      internalMiddle: internalImage2 = "",
+
       internalTop: internalImage3 = "",
       geology: geologyImage = "",
       planetSaturn: saturnImageExtra = "",
@@ -333,6 +332,7 @@ const PlanetDetails = () => {
               className={`info_box_h2 ${
                 activeSection === "overview" ? "active" : ""
               }`}
+              onClick={() => handleSectionClick("overview")}
               style={{
                 backgroundColor:
                   activeSection === "overview" ? color : "transparent",
@@ -352,6 +352,7 @@ const PlanetDetails = () => {
               className={`info_box_h2 ${
                 activeSection === "structure" ? "active" : ""
               }`}
+              onClick={() => handleSectionClick("structure")}
               style={{
                 backgroundColor:
                   activeSection === "structure" ? color : "transparent",
@@ -371,6 +372,7 @@ const PlanetDetails = () => {
               className={`info_box_h2 ${
                 activeSection === "surface" ? "active" : ""
               }`}
+              onClick={() => handleSectionClick("surface")}
               style={{
                 backgroundColor:
                   activeSection === "surface" ? color : "transparent",

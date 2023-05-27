@@ -561,6 +561,10 @@
     cursor: pointer;
   }
 
+  .info_box_h2:hover{
+    background-color: red;
+  }
+
   .number_grid_div {
     font-family: "Spartan";
     font-style: normal;
@@ -634,4 +638,6 @@
     text-transform: uppercase;
     color: #ffffff;
   }
+
+  
 }

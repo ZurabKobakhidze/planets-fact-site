@@ -4,6 +4,7 @@ import PlanetDetails from "./PlanetDetails";
 import { Routes, Route, Link, Navigate } from "react-router-dom";
 import Hamburger from "./assets/icon-hamburger.svg";
 import arrow from "./assets/icon-chevron.svg";
+import data from "./data.json";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,141 +31,59 @@ function App() {
       </header>
       <div className="underline_app"></div>
       <div className={`menu_planets ${isOpen ? "open" : ""}`}>
-        <div className="planet_mobile_divs">
-          <Link to="/planet/mercury" className="menu_names" onClick={closeMenu}>
-            <div className="mobile_menu_design">
-              <div
-                className="menu_circle"
-                style={{ backgroundColor: "#DEF4FC" }}
-              ></div>
-              <span>mercury</span>
+        {data.map((planet, index) => (
+          <React.Fragment key={index}>
+            <div className="planet_mobile_divs">
+              <Link
+                to={`/planet/${planet.name.toLowerCase()}`}
+                className="menu_names"
+                onClick={closeMenu}
+              >
+                <div className="mobile_menu_design">
+                  <div
+                    className="menu_circle"
+                    style={{ backgroundColor: planet.color }}
+                  ></div>
+                  <span>{planet.name}</span>
+                </div>
+                <img src={arrow} alt="" />
+              </Link>
             </div>
-            <img src={arrow} alt="" />
-          </Link>
-        </div>
-        <div className="underline_mobile_menu"></div>
-        <div className="planet_mobile_divs">
-          <Link to="/planet/venus" className="menu_names" onClick={closeMenu}>
-            <div className="mobile_menu_design">
-              <div
-                className="menu_circle"
-                style={{ backgroundColor: "#F7CC7F" }}
-              ></div>
-              <span>venus</span>
-            </div>
-            <img src={arrow} alt="" />
-          </Link>
-        </div>
-        <div className="underline_mobile_menu"></div>
-        <div className="planet_mobile_divs">
-          <Link to="/planet/earth" className="menu_names" onClick={closeMenu}>
-            <div className="mobile_menu_design">
-              <div
-                className="menu_circle"
-                style={{ backgroundColor: "#545BFE" }}
-              ></div>
-              <span>earth</span>
-            </div>
-            <img src={arrow} alt="" />
-          </Link>
-        </div>
-        <div className="underline_mobile_menu"></div>
-        <div className="planet_mobile_divs">
-          <Link to="/planet/mars" className="menu_names" onClick={closeMenu}>
-            <div className="mobile_menu_design">
-              <div
-                className="menu_circle"
-                style={{ backgroundColor: "#FF6A45" }}
-              ></div>
-              <span>mars</span>
-            </div>
-            <img src={arrow} alt="" />
-          </Link>
-        </div>
-        <div className="underline_mobile_menu"></div>
-        <div className="planet_mobile_divs">
-          <Link to="/planet/jupiter" className="menu_names" onClick={closeMenu}>
-            <div className="mobile_menu_design">
-              <div
-                className="menu_circle"
-                style={{ backgroundColor: "#ECAD7A" }}
-              ></div>
-              <span>jupiter</span>
-            </div>
-            <img src={arrow} alt="" />
-          </Link>
-        </div>
-        <div className="underline_mobile_menu"></div>
-        <div className="planet_mobile_divs">
-          <Link to="/planet/saturn" className="menu_names" onClick={closeMenu}>
-            <div className="mobile_menu_design">
-              <div
-                className="menu_circle"
-                style={{ backgroundColor: "#FCCB6B" }}
-              ></div>
-              <span>saturn</span>
-            </div>
-            <img src={arrow} alt="" />
-          </Link>
-        </div>
-        <div className="underline_mobile_menu"></div>
-
-        <div className="planet_mobile_divs">
-          <Link to="/planet/uranus" className="menu_names" onClick={closeMenu}>
-            <div className="mobile_menu_design">
-              <div
-                className="menu_circle"
-                style={{ backgroundColor: "#65F0D5" }}
-              ></div>
-              <span>uranus</span>
-            </div>
-            <img src={arrow} alt="" />
-          </Link>
-        </div>
-        <div className="underline_mobile_menu"></div>
-        <div className="planet_mobile_divs">
-          <Link to="/planet/neptune" className="menu_names" onClick={closeMenu}>
-            <div className="mobile_menu_design">
-              <div
-                className="menu_circle"
-                style={{ backgroundColor: "#497EFA" }}
-              ></div>
-              <span>neptune</span>
-            </div>
-            <img src={arrow} alt="" />
-          </Link>
-        </div>
+            <div className="underline_mobile_menu"></div>
+          </React.Fragment>
+        ))}
       </div>
       <div className="header_desktop_div">
         <h1 className="h1_planets_desktop">THE PLANETS</h1>
         <div className="desktop_menu_div">
-          <Link to="/planet/mercury" className="desktop_menu">
-            mercury
-          </Link>
-          <Link to="/planet/venus" className="desktop_menu">
-            venus
-          </Link>
-          <Link to="/planet/earth" className="desktop_menu">
-            earth
-          </Link>
-          <Link to="/planet/mars" className="desktop_menu">
-            mars
-          </Link>
-          <Link to="/planet/jupiter" className="desktop_menu">
-            jupiter
-          </Link>
-          <Link to="/planet/saturn" className="desktop_menu">
-            saturn
-          </Link>
-          <Link to="/planet/uranus" className="desktop_menu">
-            uranus
-          </Link>
-          <Link to="/planet/neptune" className="desktop_menu">
-            neptune
-          </Link>
+          {data.map((planet, index) => (
+            <div
+              className="planet_hover_box"
+              key={index}
+              data-color={planet.color}
+              onMouseEnter={(e) => {
+                const hoverElement =
+                  e.currentTarget.querySelector(".palent_hover");
+                hoverElement.style.background = e.currentTarget.dataset.color;
+                hoverElement.style.display = "block";
+              }}
+              onMouseLeave={(e) => {
+                const hoverElement =
+                  e.currentTarget.querySelector(".palent_hover");
+                hoverElement.style.display = "none";
+              }}
+            >
+              <Link
+                to={`/planet/${planet.name.toLowerCase()}`}
+                className="desktop_menu"
+              >
+                {planet.name}
+              </Link>
+              <div className="palent_hover" style={{ display: "none" }}></div>
+            </div>
+          ))}
         </div>
       </div>
-
       <div className="underline_app_desktop"></div>
       <Routes>
         <Route path="/" element={<Navigate to="/planet/earth" />}></Route>

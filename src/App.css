@@ -10,6 +10,8 @@
   width: 100%;
 }
 
+
+
 body {
   display: flex;
   place-items: center;
@@ -61,6 +63,10 @@ body {
 
 .menu_div {
   height: 17px;
+}
+
+.planet_hover{
+  display: none;
 }
 
 .menu_planets {
@@ -250,5 +256,20 @@ body {
     width: auto;
     gap: 33px;
     justify-content: space-between;
+  }
+
+  .planet_hover_box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .palent_hover{
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 64px;
+    top: -32px;
   }
 }
