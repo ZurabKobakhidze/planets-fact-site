@@ -132,6 +132,13 @@
   top: 0;
 }
 
+.planet_svg_4{
+  position: absolute;
+  width: 136%;
+  top: -17.7%;
+  left: -18.14%;
+}
+
 .surface_geology {
   width: 90px;
   margin-top: 100px;
@@ -336,6 +343,13 @@
     top: 0;
   }
 
+  .planet_svg_4{
+    position: absolute;
+    width: 136%;
+    top: -17.7%;
+    left: -18.14%;
+  }
+
   .source_div {
     margin-top: 32px;
   }
@@ -420,8 +434,7 @@
     height: 460px;
   }
 
-  .planet_svg {
-  }
+  
 
   .surface_geology {
     width: 104px;
@@ -491,8 +504,9 @@
 
   .planet_svg_4{
     position: absolute;
-    width: 120%;
-    top: 0;
+    width: 136%;
+    top: -17.7%;
+    left: -18.14%;
   }
 
   .surface_geology {
