@@ -7,7 +7,6 @@ import arrow from "./assets/icon-chevron.svg";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
-  
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -84,19 +83,6 @@ function App() {
         </div>
         <div className="underline_mobile_menu"></div>
         <div className="planet_mobile_divs">
-          <Link to="/planet/saturn" className="menu_names" onClick={closeMenu}>
-            <div className="mobile_menu_design">
-              <div
-                className="menu_circle"
-                style={{ backgroundColor: "#FCCB6B" }}
-              ></div>
-              <span>saturn</span>
-            </div>
-            <img src={arrow} alt="" />
-          </Link>
-        </div>
-        <div className="underline_mobile_menu"></div>
-        <div className="planet_mobile_divs">
           <Link to="/planet/jupiter" className="menu_names" onClick={closeMenu}>
             <div className="mobile_menu_design">
               <div
@@ -109,6 +95,20 @@ function App() {
           </Link>
         </div>
         <div className="underline_mobile_menu"></div>
+        <div className="planet_mobile_divs">
+          <Link to="/planet/saturn" className="menu_names" onClick={closeMenu}>
+            <div className="mobile_menu_design">
+              <div
+                className="menu_circle"
+                style={{ backgroundColor: "#FCCB6B" }}
+              ></div>
+              <span>saturn</span>
+            </div>
+            <img src={arrow} alt="" />
+          </Link>
+        </div>
+        <div className="underline_mobile_menu"></div>
+
         <div className="planet_mobile_divs">
           <Link to="/planet/uranus" className="menu_names" onClick={closeMenu}>
             <div className="mobile_menu_design">
@@ -167,7 +167,7 @@ function App() {
 
       <div className="underline_app_desktop"></div>
       <Routes>
-        <Route path="/" element={<Navigate to="/planet/earth"/>}></Route>
+        <Route path="/" element={<Navigate to="/planet/earth" />}></Route>
         <Route path="/planet/:planetName" element={<PlanetDetails />} />
       </Routes>
     </div>

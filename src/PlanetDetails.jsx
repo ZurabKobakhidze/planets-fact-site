@@ -34,6 +34,7 @@ const PlanetDetails = () => {
       internalMiddle: internalImage2 = "",
       internalTop: internalImage3 = "",
       geology: geologyImage = "",
+      planetSaturn: saturnImageExtra = "",
     } = {},
   } = selectedPlanet;
 
@@ -204,54 +205,20 @@ const PlanetDetails = () => {
                   src={planetImage3}
                   alt={name}
                 />
+
+                {name.toLowerCase() === "saturn" && (
+                  <motion.img
+                    className="planet_svg_4"
+                    src={saturnImageExtra}
+                    alt={name}
+                  />
+                )}
               </div>
             )}
 
             {activeSection === "structure" && (
               <div className="motion_planet_div">
-                <motion.img
-                  className="planet_svg"
-                  src={planetImage}
-                  alt={name}
-                />
-
-                <motion.img
-                  className="planet_svg_2"
-                  src={planetImage2}
-                  alt={name}
-                  variants={motionVariants0}
-                  initial="initial"
-                  animate="animate"
-                />
-
-                <motion.img
-                  className="planet_svg_2"
-                  src={planetImage2}
-                  alt={name}
-                  variants={motionVariants1}
-                  initial="initial"
-                  animate="animate"
-                />
-
-                <motion.img
-                  className="planet_svg_2"
-                  src={planetImage2}
-                  alt={name}
-                  variants={motionVariants2}
-                  initial="initial"
-                  animate="animate"
-                />
-                <motion.img
-                  className="planet_svg_3_internal"
-                  src={internalImage3}
-                  alt={name}
-                />
-              </div>
-            )}
-
-            {activeSection === "surface" && (
-              <>
-                <div className="motion_planet_div">
+                <div className="planet_svgs_overflow">
                   <motion.img
                     className="planet_svg"
                     src={planetImage}
@@ -284,11 +251,72 @@ const PlanetDetails = () => {
                     initial="initial"
                     animate="animate"
                   />
+                </div>
+                <motion.img
+                  className="planet_svg_3_internal"
+                  src={internalImage3}
+                  alt={name}
+                />
+                {name.toLowerCase() === "saturn" && (
+                  <motion.img
+                    className="planet_svg_4"
+                    src={saturnImageExtra}
+                    alt={name}
+                  />
+                )}
+              </div>
+              
+            )}
+
+            {activeSection === "surface" && (
+              <>
+                <div className="motion_planet_div">
+                  <div className="planet_svgs_overflow">
+                    <motion.img
+                      className="planet_svg"
+                      src={planetImage}
+                      alt={name}
+                    />
+
+                    <motion.img
+                      className="planet_svg_2"
+                      src={planetImage2}
+                      alt={name}
+                      variants={motionVariants0}
+                      initial="initial"
+                      animate="animate"
+                    />
+
+                    <motion.img
+                      className="planet_svg_2"
+                      src={planetImage2}
+                      alt={name}
+                      variants={motionVariants1}
+                      initial="initial"
+                      animate="animate"
+                    />
+
+                    <motion.img
+                      className="planet_svg_2"
+                      src={planetImage2}
+                      alt={name}
+                      variants={motionVariants2}
+                      initial="initial"
+                      animate="animate"
+                    />
+                  </div>
                   <motion.img
                     className="planet_svg_3"
                     src={planetImage3}
                     alt={name}
                   />
+                  {name.toLowerCase() === "saturn" && (
+                  <motion.img
+                    className="planet_svg_4"
+                    src={saturnImageExtra}
+                    alt={name}
+                  />
+                )}
                 </div>
                 <motion.img
                   className="planet_svg surface_geology"

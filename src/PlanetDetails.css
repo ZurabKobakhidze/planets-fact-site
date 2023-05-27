@@ -27,8 +27,6 @@
   position: relative;
 }
 
-
-
 .h2_info {
   font-family: "Spartan";
   font-style: normal;
@@ -65,7 +63,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
 
 .planet_name {
@@ -94,44 +91,45 @@
   margin-top: 10px;
 }
 
-.motion_planet_div{
+.motion_planet_div {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
- 
+  width: 38.5%;
+  height: 38.5%;
 }
 
-.planet_svgs_overflow{
+.planet_svgs_overflow {
   overflow: hidden;
   border-radius: 50%;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
- 
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
-
 .planet_svg {
-  
-
+  position: relative;
+  width: 100%;
 }
 
-.planet_svg_2{
+.planet_svg_2 {
   position: absolute;
-
+  width: 100%;
   transform: none;
   opacity: 1;
 }
 
-.planet_svg_3{
- 
+.planet_svg_3 {
   position: absolute;
+  width: 100%;
+  top: 0;
 }
 
-.planet_svg_3_internal{
- 
+.planet_svg_3_internal {
   position: absolute;
+  width: 100%;
+  top: 0;
 }
 
 .surface_geology {
@@ -297,6 +295,47 @@
     height: 110px;
   }
 
+  .motion_planet_div {
+    position: relative;
+    width: 64%;
+    height: 64%;
+  }
+
+  .planet_svgs_overflow {
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  .planet_svg {
+    position: relative;
+    width: 100%;
+  }
+
+  .planet_svg_2 {
+    position: absolute;
+    width: 100%;
+    transform: none;
+    opacity: 1;
+  }
+
+  .planet_svg_3 {
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+
+  .planet_svg_3_internal {
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+
   .source_div {
     margin-top: 32px;
   }
@@ -382,7 +421,6 @@
   }
 
   .planet_svg {
-   
   }
 
   .surface_geology {
@@ -401,7 +439,7 @@
     padding-right: 165px;
   }
 
-  .grid_container{
+  .grid_container {
     display: flex;
     align-items: flex-start;
     flex-direction: column-reverse;
@@ -410,75 +448,90 @@
     gap: 39px;
   }
 
-  .planet_svgs_overflow{
+  .motion_planet_div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .planet_svgs_overflow {
     overflow: hidden;
     border-radius: 50%;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+    justify-content: center;
+    width: 100%;
+    height: 100%;
   }
-  
   .planet_svg {
     position: relative;
-    
-    
+    width: 100%;
   }
-  
-  .planet_svg_2{
+
+  .planet_svg_2 {
     position: absolute;
-    
+    width: 100%;
     transform: none;
     opacity: 1;
   }
-  
-  .planet_svg_3{
-    
+
+  .planet_svg_3 {
     position: absolute;
-  }
-  
-  .planet_svg_3_internal{
-   
-    position: absolute;
+    width: 100%;
+    top: 0;
   }
 
-  .surface_geology{
+  .planet_svg_3_internal {
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+
+  .planet_svg_4{
+    position: absolute;
+    width: 120%;
+    top: 0;
+  }
+
+  .surface_geology {
     width: 163px;
     margin-top: 380px;
+    position: absolute;
   }
 
-  .mini_container1_1{
+  .mini_container1_1 {
     height: 754px;
     width: 100%;
   }
 
-  .planet_name{
-    font-family: 'Antonio';
+  .planet_name {
+    font-family: "Antonio";
     font-style: normal;
     font-weight: 400;
     font-size: 80px;
     line-height: 104px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
-  .h2_source{
-    font-family: 'Spartan';
+  .h2_source {
+    font-family: "Spartan";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 25px;
-    color: #FFFFFF;
+    color: #ffffff;
     mix-blend-mode: normal;
     opacity: 0.5;
   }
 
-  .source_div{
+  .source_div {
     margin-top: 24px;
   }
 
-  .info_box_h2{
+  .info_box_h2 {
     flex-direction: row;
     display: flex;
     align-items: center;
@@ -494,44 +547,40 @@
     cursor: pointer;
   }
 
-  
-
-
-
-  .number_grid_div{
-    font-family: 'Spartan';
+  .number_grid_div {
+    font-family: "Spartan";
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
     line-height: 25px;
     letter-spacing: 2.57143px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #ffffff;
     mix-blend-mode: normal;
     opacity: 0.5;
   }
 
-  .h2_info{
+  .h2_info {
     width: 260px;
-    font-family: 'Spartan';
+    font-family: "Spartan";
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
     line-height: 25px;
     letter-spacing: 2.57143px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #ffffff;
     cursor: pointer;
   }
 
-  .container_2{
+  .container_2 {
     padding-left: 165px;
     padding-right: 165px;
     flex-direction: row;
     padding-bottom: 56px;
   }
 
-  .container_2_info_box{
+  .container_2_info_box {
     height: 128px;
     display: flex;
     align-items: flex-start;
@@ -548,27 +597,27 @@
     gap: 4px;
   }
 
-  .rotation{
-    font-family: 'Spartan';
+  .rotation {
+    font-family: "Spartan";
     font-style: normal;
     font-weight: 700;
     font-size: 11px;
     line-height: 25px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #ffffff;
     mix-blend-mode: normal;
     opacity: 0.5;
   }
 
-  .numbers_info{
-    font-family: 'Antonio';
+  .numbers_info {
+    font-family: "Antonio";
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
     line-height: 52px;
     letter-spacing: -1.5px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 }
