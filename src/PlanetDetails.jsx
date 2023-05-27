@@ -264,7 +264,6 @@ const PlanetDetails = () => {
                   />
                 )}
               </div>
-              
             )}
 
             {activeSection === "surface" && (
@@ -310,12 +309,12 @@ const PlanetDetails = () => {
                     alt={name}
                   />
                   {name.toLowerCase() === "saturn" && (
-                  <motion.img
-                    className="planet_svg_4"
-                    src={saturnImageExtra}
-                    alt={name}
-                  />
-                )}
+                    <motion.img
+                      className="planet_svg_4"
+                      src={saturnImageExtra}
+                      alt={name}
+                    />
+                  )}
                 </div>
                 <motion.img
                   className="planet_svg surface_geology"
@@ -338,15 +337,17 @@ const PlanetDetails = () => {
                   activeSection === "overview" ? color : "transparent",
               }}
             >
-              <span className="number_grid_div">01</span>
-              <button
-                className={`h2_info ${
-                  activeSection === "overview" ? "active" : ""
-                }`}
-                onClick={() => handleSectionClick("overview")}
-              >
-                OVERVIEW
-              </button>
+              <div className="hover_div_under">
+                <span className="number_grid_div">01</span>
+                <button
+                  className={`h2_info ${
+                    activeSection === "overview" ? "active" : ""
+                  }`}
+                  onClick={() => handleSectionClick("overview")}
+                >
+                  OVERVIEW
+                </button>
+              </div>
             </div>
             <div
               className={`info_box_h2 ${
@@ -358,15 +359,17 @@ const PlanetDetails = () => {
                   activeSection === "structure" ? color : "transparent",
               }}
             >
-              <span className="number_grid_div">02</span>
-              <button
-                className={`h2_info ${
-                  activeSection === "structure" ? "active" : ""
-                }`}
-                onClick={() => handleSectionClick("structure")}
-              >
-                Structure
-              </button>
+              <div className="hover_div_under">
+                <span className="number_grid_div">02</span>
+                <button
+                  className={`h2_info ${
+                    activeSection === "structure" ? "active" : ""
+                  }`}
+                  onClick={() => handleSectionClick("structure")}
+                >
+                  Structure
+                </button>
+              </div>
             </div>
             <div
               className={`info_box_h2 ${
@@ -378,15 +381,17 @@ const PlanetDetails = () => {
                   activeSection === "surface" ? color : "transparent",
               }}
             >
-              <span className="number_grid_div">03</span>
-              <button
-                className={`h2_info ${
-                  activeSection === "surface" ? "active" : ""
-                }`}
-                onClick={() => handleSectionClick("surface")}
-              >
-                Surface
-              </button>
+              <div className="hover_div_under">
+                <span className="number_grid_div">03</span>
+                <button
+                  className={`h2_info ${
+                    activeSection === "surface" ? "active" : ""
+                  }`}
+                  onClick={() => handleSectionClick("surface")}
+                >
+                  Surface
+                </button>
+              </div>
             </div>
           </div>
           <div className="mini_container1_2">
