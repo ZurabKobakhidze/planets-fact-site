@@ -132,7 +132,7 @@
   top: 0;
 }
 
-.planet_svg_4{
+.planet_svg_4 {
   position: absolute;
   width: 136%;
   top: -17.7%;
@@ -343,7 +343,7 @@
     top: 0;
   }
 
-  .planet_svg_4{
+  .planet_svg_4 {
     position: absolute;
     width: 136%;
     top: -17.7%;
@@ -355,15 +355,13 @@
   }
 
   .info_box_h2 {
-    
     border: 1px solid rgba(255, 255, 255, 0.2);
     background: none;
     height: 40px;
     width: 281px;
-    
   }
 
-  .hover_div_under{
+  .hover_div_under {
     flex-direction: row;
     display: flex;
     align-items: center;
@@ -375,7 +373,6 @@
     padding-right: 2px;
     box-sizing: border-box;
   }
-
 
   .h2_info {
     font-family: "Spartan";
@@ -441,8 +438,6 @@
   .mini_container1_1 {
     height: 460px;
   }
-
-  
 
   .surface_geology {
     width: 104px;
@@ -510,7 +505,7 @@
     top: 0;
   }
 
-  .planet_svg_4{
+  .planet_svg_4 {
     position: absolute;
     width: 136%;
     top: -17.7%;
@@ -561,7 +556,7 @@
     cursor: pointer;
   }
 
-  .hover_div_under{
+  .hover_div_under {
     flex-direction: row;
     display: flex;
     align-items: center;
@@ -574,12 +569,11 @@
     box-sizing: border-box;
   }
 
-  .hover_div_under:hover{
+  .hover_div_under:hover {
     background: rgba(216, 216, 216, 0.2);
     mix-blend-mode: normal;
   }
 
- 
   .number_grid_div {
     font-family: "Spartan";
     font-style: normal;
@@ -653,6 +647,4 @@
     text-transform: uppercase;
     color: #ffffff;
   }
-
-  
 }

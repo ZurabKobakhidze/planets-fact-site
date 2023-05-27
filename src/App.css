@@ -10,8 +10,6 @@
   width: 100%;
 }
 
-
-
 body {
   display: flex;
   place-items: center;
@@ -65,7 +63,7 @@ body {
   height: 17px;
 }
 
-.planet_hover{
+.planet_hover {
   display: none;
 }
 
@@ -247,7 +245,7 @@ body {
     align-items: flex-end;
   }
 
-  .desktop_menu_div{
+  .desktop_menu_div {
     display: flex;
     flex-direction: row;
     padding-left: 0px;
@@ -258,14 +256,14 @@ body {
     justify-content: space-between;
   }
 
-  .planet_hover_box{
+  .planet_hover_box {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .palent_hover{
+  .palent_hover {
     display: block;
     position: absolute;
     height: 4px;
